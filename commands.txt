@@ -4,4 +4,5 @@ mkdir yomali
 cd yomali
 cp -r ${WORKSPACE}/* ${TARGETDIR}/yomali
 npm install
-${TARGETDIR}/yomali/node_modules/forever/bin/forever start app.js
+chmod +x ${TARGETDIR}/yomali/run.sh
+${TARGETDIR}/yomali/run.sh
