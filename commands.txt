@@ -4,5 +4,5 @@ mkdir yomali
 cd yomali
 cp -r ${WORKSPACE}/* ${TARGETDIR}/yomali
 npm install
-chmod +x ${TARGETDIR}/yomali/run.sh
-${TARGETDIR}/yomali/run.sh
+chmod -R 777 ${TARGETDIR}/yomali
+sed -i 's/[[TARGETDIR]]/${TARGETDIR}/g' ${TARGETDIR}/yomali/run.sh
