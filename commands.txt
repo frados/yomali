@@ -1,8 +1,19 @@
+################################################################################
+#START SERVER###################################################################
+################################################################################
 cd ${TARGETDIR}
 rm -rf yomali/
+rm -f run.sh
 mkdir yomali
 cd yomali
 cp -r ${WORKSPACE}/* ${TARGETDIR}/yomali
 sed -i "s|__TARGETDIR__|${TARGETDIR}|g" ${TARGETDIR}/yomali/run.sh
 npm install
 chmod -R 777 ${TARGETDIR}/yomali
+mv run.sh ${TARGETDIR}/
+rm -f run.sh commands.txt
+
+################################################################################
+#Apply changes and restart server###############################################
+################################################################################
+echo ${TARGETDIR}
