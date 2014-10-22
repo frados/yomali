@@ -14,7 +14,6 @@
     "scripts": {
         "start": "node app.js",
         "debug": "node debug app.js"
-        //"preinstall": "npm i -g forever"
     },
     "main": "app.js",
     "repository": "",
