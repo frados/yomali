@@ -1,6 +1,6 @@
 cd TARGETDIR
 mkdir yomali
 cd yomali
-cp -r WORKSPACE/* TARGETDIR/yomali
+cp -r ${WORKSPACE}/* TARGETDIR/yomali
 npm install
-sails lift
+forever app.js
