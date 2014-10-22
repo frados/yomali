@@ -16,7 +16,8 @@ rm -f run.sh commands.txt
 ################################################################################
 #Apply changes and restart server###############################################
 ################################################################################
-cd ${TARGETDIR}
-rm -rf yomali/.git
+cd ${TARGETDIR}/yomali
+rm -rf .git/
 cp -r ${WORKSPACE}/.git ${TARGETDIR}/yomali
 chmod -R 777 ${TARGETDIR}/yomali/.git
+git pull origin master
