@@ -1,6 +1,7 @@
-cd TARGETDIR
+cd ${TARGETDIR}
+rm -rf yomali/
 mkdir yomali
 cd yomali
-cp -r ${WORKSPACE}/* TARGETDIR/yomali
+cp -r ${WORKSPACE}/* ${TARGETDIR}/yomali
 npm install
-forever app.js
+${TARGETDIR}/yomali/node_modules/forever/bin/forever start app.js
