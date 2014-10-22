@@ -16,4 +16,7 @@ rm -f run.sh commands.txt
 ################################################################################
 #Apply changes and restart server###############################################
 ################################################################################
-echo ${TARGETDIR}
+cd ${TARGETDIR}
+rm -rf yomali/.git
+cp -r ${WORKSPACE}/.git ${TARGETDIR}/yomali
+chmod -R 777 ${TARGETDIR}/yomali/.git
